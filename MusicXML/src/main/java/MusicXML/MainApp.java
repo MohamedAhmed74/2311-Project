@@ -16,14 +16,15 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         
-    	Parent root = null;
+//    	Parent root = null;
 		try {
-			root = FXMLLoader.load(getClass().getResource("musicXML.fxml"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		Parent	root = FXMLLoader.load(getClass().getResource("musicXML.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);					// add a scene to the Stage
         primaryStage.show();							// show the Stage (a blank window)
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
     }
 }
